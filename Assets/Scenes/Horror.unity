@@ -1012,7 +1012,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.6
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -1770,6 +1770,11 @@ Prefab:
       propertyPath: m_Name
       value: Creature
       objectReference: {fileID: 0}
+    - target: {fileID: 135053550445195176, guid: d6f8729738c05064c9d88a90c2599621,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6f8729738c05064c9d88a90c2599621, type: 2}
   m_IsPrefabParent: 0
@@ -1848,7 +1853,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 22, y: 13}
+  m_SizeDelta: {x: 24, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320839669
 MonoBehaviour:
@@ -2380,7 +2385,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.41457608, g: 0.99264705, b: 0.27005842, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2761,6 +2766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d905ca34c55cda499efda9199a5ab31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 1387968639}
+  winPanel: {fileID: 1397026059}
   time: 3
   monster: {fileID: 775633273}
   audioSource: {fileID: 1641889336}

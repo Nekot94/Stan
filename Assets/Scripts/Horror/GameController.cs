@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    //public GameObject blood;
-    //public GameObject winPanel;
+    public GameObject blood;
+    public GameObject winPanel;
 
     public float time = 3;
     public GameObject monster;
@@ -20,13 +20,13 @@ public class GameController : MonoBehaviour
 
     public void LooseGame()
     {
-        //blood.SetActive(true);
+        blood.SetActive(true);
         StartCoroutine(Restart());
     }
 
     public void WinGame()
     {
-        //winPanel.SetActive(true);
+        winPanel.SetActive(true);
         audioSource.clip = winSound;
         monster.SetActive(false);
         audioSource.Play();
@@ -35,9 +35,9 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnMonster()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         audioSource.Play();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         monster.SetActive(true);
     }
 
