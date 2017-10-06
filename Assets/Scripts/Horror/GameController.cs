@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public GameObject monster;
     public AudioSource audioSource;
     public AudioClip winSound;
+    public float firstSpawnTime = 2;
+    public float secondSpawnTime = 2;
 
     private void Start()
     {
@@ -35,9 +37,9 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnMonster()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(firstSpawnTime);
         audioSource.Play();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(secondSpawnTime);
         monster.SetActive(true);
     }
 
